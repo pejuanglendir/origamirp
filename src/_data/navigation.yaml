@@ -1,10 +1,10 @@
 ---
 items:
-  - text: Menu One
+  - text: Beranda
     url: "#"
-  - text: Menu Two
+  - text: Statistik
     url: "#"
-  - text: Menu Three
+  - text: Petunjuk
     url: "#"
-  - text: Blog
+  - text: Peraturan
     url: "/blog"
