@@ -1,0 +1,252 @@
+:root {
+    --bg:#111;
+    --light:#fff;
+    --gray:#737373;
+    --space: min(max(12px, 3.5vmin), 30px);
+    --space-s: min(max(8px, 2vmin), 20px);
+    --space-xs: min(max(4px, 1vmin), 10px);
+    --radius:20px;
+    --max-width:1140px;
+    --h1: calc(35px + (128 - 35) * ((100vw - 360px) / (1440 - 360)));
+    --h2: calc(30px + (64 - 30) * ((100vw - 360px) / (1440 - 360)));
+    --number: calc(24 + (32 - 24) * ((100vw - 360px) / (1440 - 360)));
+    --progress-title: calc(22 + (26 - 22) * ((100vw - 360px) / (1440 - 360)));
+}
+
+html {
+    scroll-behavior: initial;
+    overflow: hidden;
+}
+
+
+body {
+    background:var(--bg);
+    color:var(--light);
+    font-family: 'Antic Didone', serif;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    z-index: 3;
+    font-kerning: none;
+}
+
+* {
+    margin:0;
+}
+
+.preloader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    width:100vw;
+    background: var(--bg);
+    overflow: hidden;
+    position:fixed;
+}
+
+.hero-image {
+    height:480px;
+    width: 1920px;
+}
+
+
+.btn {
+    color: var(--light);
+    font-family: 'Syne', sans-serif;
+    text-decoration: none;
+}
+
+.btn-primary {
+    border:1px solid var(--light);
+    border-radius: var(--radius) 0 var(--radius) 0;
+    z-index: 3;
+}
+
+.btn-hero {
+    bottom: 0;
+    z-index: 3;
+}
+
+.line {
+    position:fixed;
+    width: 1px;
+    height: 100vh;
+    background: var(--gray);
+    top:0%;
+}
+
+.line-right {
+    right:14.19%;
+}
+
+.line-left {
+    left:14.19%;
+}
+
+.heading, .preloader-title {
+    font-size:var(--h1);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Syne', sans-serif;
+    line-height: .8;
+}
+
+.heading-2 {
+    font-size:var(--h2);
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+}
+
+#feature-heading, #description-about {
+    opacity:0;
+    transform:translateY(100%) ;
+}
+
+#statistik{
+    background-image: url("gta-v-logo.png");
+    background-repeat: no-repeat;
+    background-position: 100% 20%;
+    position: relative;
+}
+.gradient-layer{
+    background: linear-gradient(45deg, #111 55.82%, rgba(17, 17, 17, 0.00) 100%);
+    width:100%;
+    height: 100%;
+    position: absolute;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin:auto;
+    padding: calc(var(--space) * 1.5) var(--space);
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+.align-left {
+    align-items: flex-start;
+}
+
+.columns-2{
+    grid-template-columns: repeat(2, 1fr);
+    display:grid;
+}
+
+.grid-gap {
+    grid-gap:var(--space);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    z-index: 5;
+}
+
+.object-fit {
+    object-fit: cover;
+}
+
+.origami_slider_item {
+    height:480px;
+    width: 1440px;
+    object-fit: cover;
+}
+
+.margin-bottom {
+    margin-bottom:calc(var(--space) * 2);
+}
+
+@media screen and (max-width: 768px) {
+    .columns-m-1 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* From Youtube Tutorial */
+
+.horizontal__content {
+    display: flex;
+}
+
+.origami_slider_item:not(:last-child) {
+    margin-right:50px;
+}
+
+.text-wrapper {
+    display:flex;
+    justify-content: flex-start;
+    background: var(--light);
+    overflow: hidden;
+}
+
+.origami-text{
+    color: var(--bg);
+    font-size:48px;
+    text-transform: uppercase;
+    font-family: 'Syne', sans-serif;
+    white-space: nowrap;
+    padding:0 var(--space);
+    animation: origami-rtl 2000ms linear infinite;
+}
+
+@keyframes origami-rtl{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Progress Bar */
+.progress{
+    background: rgba(28, 28, 28, 0.69);
+    height:25px;
+    width: 100%;
+    position:relative;
+    margin-bottom: var(--space);
+    z-index:5;
+}
+.progress-43{
+    position:absolute;
+    left:0%;
+    background: var(--light);
+    height: 25px;
+    width:4%;
+    z-index: 62;
+}
+
+.progress-wrapper {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-s);
+}
+
+.progress-title{
+    letter-spacing:1.9px;
+    text-transform: uppercase;  
+    font-size:var(--progress-title);
+    z-index:5;
+
+}
+
+.progress-number {
+    font-family: 'Syne', sans-serif;
+    font-size: var(--number);
+    z-index:5;
+
+}
