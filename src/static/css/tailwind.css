@@ -58,11 +58,13 @@ h1,h2,h3,h4,h5,h6,p {
   background: var(--bg);
   overflow: hidden;
   position:fixed;
+  z-index:9999;
 }
 
 .hero-image {
   height:480px;
   width: 1920px;
+  object-position: top center;
 }
 
 
@@ -119,7 +121,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 #statistik{
-  background-image: url("https://origamirp.b-cdn.net/img/gta-v-logo.webp");
+  background-image: url("gta-v-logo.png");
   background-repeat: no-repeat;
   background-position: 100% 20%;
   position: relative;
@@ -131,11 +133,17 @@ h1,h2,h3,h4,h5,h6,p {
   position: absolute;
 }
 
+
 .container {
   max-width: var(--max-width);
   margin:auto;
   padding: calc(var(--space) * 1.5) var(--space);
 }
+
+.hero-container {
+  padding: calc(var(--space) * 5) var(--space) calc(var(--space) * 1.5) var(--space);
+}
+
 
 .flex {
   display: flex;
@@ -235,14 +243,35 @@ img {
   margin-bottom: var(--space);
   z-index:5;
 }
-.progress-43{
+.progress-43, .progress-150, .progress-27, .progress-80, .progress-300{
   position:absolute;
   left:0%;
   background: var(--light);
   height: 25px;
-  width:4%;
   z-index: 62;
 }
+
+.progress-43 {
+  width:4%;
+}
+
+.progress-150 {
+  width:15%;
+}
+
+.progress-27 {
+  width:2.7%;
+}
+
+.progress-80 {
+  width:8%;
+}
+
+.progress-300 {
+  width:30%;
+}
+
+
 
 .progress-wrapper {
   display:flex;
