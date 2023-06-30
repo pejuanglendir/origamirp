@@ -195,6 +195,10 @@ img {
       display: grid;
       grid-template-columns: 1fr;
   }
+  html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 }
 
 
