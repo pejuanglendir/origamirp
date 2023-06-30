@@ -51,7 +51,14 @@ let hero = gsap.timeline();
                 stagger: .05,
                 duration: 1.3,
                 ease: "back.out(1.7)",
-                });
+                })
+                hero.from("#discord, #connect", {
+                    opacity:0,
+                    y:100,
+                    stagger: .5,
+                    duration: 1.3,
+                    ease: "back.out(1.7)",
+                    });
 
                // gsap.to("#feature-heading", {
                   //  scrollTrigger: {
@@ -65,7 +72,7 @@ let hero = gsap.timeline();
                  // });
 
                   
-                  const imganim2 = gsap.to("#feature-heading, #description-about", {
+                const imganim2 = gsap.to("#feature-heading, #description-about", {
                     y: 0,
                     opacity:1,
                     autoAlpha: 1,
@@ -81,6 +88,9 @@ let hero = gsap.timeline();
                     toggleActions: "play reverse play reverse"
                 })
 
+
+
+                
   const section_2 = document.getElementById("horizontal");
   let box_items = gsap.utils.toArray(".origami_slider_item");
   
