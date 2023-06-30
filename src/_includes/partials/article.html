@@ -1,4 +1,4 @@
-<section class="mt-15">
+<!-- <section class="mt-15">
     {% set postslist = collections.post %}
 
     {% for post in postslist | reverse %}
@@ -34,4 +34,28 @@
 
         </article>
     {% endfor %}
-</section>
+</section> -->
+
+
+<div class="columns-2 grid-gap">
+    {% set postslist = collections.post %}
+
+    {% for post in postslist | reverse %}
+
+    <article>
+        <div class="featured-ratio">
+            <img src="{{ post.data.image }}" alt="" class="object-fit featured-image">
+        </div>
+        <a href="{{ post.url | url }}">
+            <h2 class="article-title">
+                {% if post.data.title %}
+                        {{ post.data.title }}
+                    {% else %}
+                        Untitled
+                    {% endif %}
+            </h2>
+        </a>
+
+    </article>
+    {% endfor %}
+</div>
